@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="style.css">
+  <title>Vite App</title>
+</head>
+
+<body class="bg-[url('bg.jpg')] bg-cover">
+  <section class="flex flex-col justify-center items-center mt-10 mx-28">
+    <div>
+      <h1 class="text-5xl text-center text-blue-900 font-extrabold my-10">Weather App</h1>
+      <p id="time" class="text-center text-white text-2xl"></p>
+      <input type="text" placeholder="Search city" id="search" autocomplete="off"
+        class="border-2 border-none text-center w-96 my-10 rounded-3xl h-10 focus:outline-none">
+      <button class="relative left-[-45px] bottom-[-5px] bg-slate-100 rounded-3xl p-2" id="searchButton">
+        <img class="w-6" src="/search.svg" alt="">
+      </button>
+
+      <p id="cityNam" class="text-center text-4xl text-white capitalize"></p>
+    </div><br>
+
+    <div id="loader"
+      class="block loader ease-linear rounded-full border-8 border-gray-300  border-t-8 border-t-blue-500  h-16 w-16 animate-spin">
+    </div>
+
+    <div class="flex flex-row gap-4 max-w-full w-full my-10">
+      <div class="bg-sky-200 rounded-xl text-center py-4 px-8 w-1/3">
+        <h2>Yesterday</h2>
+
+        <div class="flex flex-row justify-between">
+          <h2>Avg. Temperature</h2>
+          <p id="avgtemp_c"></p>
+        </div>
+        <div class="flex flex-row justify-between">
+          <h2>Avg. Temp in fehrenhit</h2>
+          <p id="avgtemp_f"></p>
+        </div>
+
+        <div class="flex flex-row justify-between">
+          <h2>Avg. Humadity</h2>
+          <p id="avghumidity"></p>
+        </div>
+        <div class="flex flex-row justify-between">
+          <h2>Max wind</h2>
+          <p id="maxwind_kph"></p>
+        </div>
+      </div>
+
+      <div class="bg-sky-200 rounded-xl text-center py-4 px-8 w-1/3">
+        <h2>Today</h2>
+
+        <div class="flex flex-row justify-between">
+          <h2>Temperature</h2>
+          <p id="temprature"></p>
+        </div>
+        <div class="flex flex-row justify-between">
+          <h2>Temp in fehrenhit</h2>
+          <p id="temprature_f"></p>
+        </div>
+        <div class="flex flex-row justify-between">
+          <h2>Feelslike</h2>
+          <p id="feelslike_c"></p>
+        </div>
+        <div class="flex flex-row justify-between">
+          <h2>Humadity</h2>
+          <p id="humidity"></p>
+        </div>
+        <div class="flex flex-row justify-between">
+          <h2>wind</h2>
+          <p id="wind_kph"></p>
+        </div>
+      </div>
+
+      <div class="bg-sky-200 rounded-xl text-center py-4 px-8 w-1/3">
+        <h2>Tomorrow</h2>
+
+        <div class="flex flex-row justify-between">
+          <h2>Avg. Temperature</h2>
+          <p id="tom_avgtemp_c"></p>
+        </div>
+        <div class="flex flex-row justify-between">
+          <h2>Avg. Temp in fehrenhit</h2>
+          <p id="tom_avgtemp_f"></p>
+        </div>
+        <div class="flex flex-row justify-between">
+          <h2>Avg. Humadity</h2>
+          <p id="tom_avghumidity"></p>
+        </div>
+        <div class="flex flex-row justify-between">
+          <h2>Max wind</h2>
+          <p id="tom_maxwind_kph"></p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <script type="module" src="/main.js"></script>
+</body>
+
+</html>
